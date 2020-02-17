@@ -38,7 +38,10 @@ def check():
         B=B+1
         break
 
-  return A+"A"+B+"B"
+  ABD={"A":A,"B":B}
+  ABj = json.dumps(ABD)
+
+  return "{\"set_attributes\":" + ABj + "}"
 
 
 
