@@ -42,14 +42,14 @@ def check():
           B=B+1
           break
     re=0
-    for l in guess:
-      re=0
-      for m in (0,len(guess)):
-        if l==guess[m]:
-          re+=1
-        if re>=2:
-          B=-1
-          break
+    #for l in guess:
+      #re=0
+      #for m in (0,len(guess)):
+        #if l==guess[m]:
+          #re+=1
+        #if re>=2:
+          #B=-1
+          #break
   else:
     B=-1
 
