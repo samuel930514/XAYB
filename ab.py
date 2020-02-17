@@ -19,7 +19,7 @@ def Q():
 	Ansj = json.dumps(Ans2)
 
 	print (Ansj)
-	return Ansj
+	return "{"set_attributes":" + Ansj "}"
 
 if __name__=="__main__":
 	app.debug=True	
