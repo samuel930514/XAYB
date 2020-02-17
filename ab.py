@@ -1,3 +1,4 @@
+
 import requests
 import random
 from flask import Flask
@@ -24,10 +25,13 @@ def Q():
 @app.route("/check")
 def check():
 
+  
+
   A=0
   B=0
   guess=str(request.args.get('guess'))
   Ans=str(request.args.get('Ans'))
+
 
   for j in guess:
     for k in range(0,4):
@@ -38,6 +42,20 @@ def check():
         B=B+1
         break
 
+  if len(guess)!=4:
+    B=-1
+
+  re=0
+
+  for l in guess:
+    re=0
+    for m in (0,len(guess)):
+      if l==guess[m]:
+        re+=1
+      if re>=2:
+        B=-1
+        break
+  
   ABD={"A":A,"B":B}
   ABj = json.dumps(ABD)
 
@@ -48,5 +66,6 @@ def check():
 
 
 if __name__=="__main__":
-	app.debug=True	
+	app.debug="off"	
 	app.run()
+
