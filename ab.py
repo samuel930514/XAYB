@@ -33,12 +33,12 @@ def check():
   Ans=str(request.args.get('Ans'))
 
   if len(guess)==4:
-    for j in guess:
+    for j in range(0,len(guess)):
       for k in range(0,4):
-        if j==Ans[k] and j==k:
+        if guess[j]==Ans[k] and j==k:
           A=A+1
           break
-        elif j==Ans[k]:
+        elif guess[j]==Ans[k]:
           B=B+1
           break
     re=0
