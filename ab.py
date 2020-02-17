@@ -21,6 +21,29 @@ def Q():
 	print (Ansj)
 	return "{\"set_attributes\":" + Ansj + "}"
 
+@app.route("/check")
+def check():
+
+  A=0
+  B=0
+  guess=str(request.args.get('guess'))
+  Ans=str(request.args.get('Ans'))
+
+  for j in guess:
+    for k in range(0,4):
+      if j==Ans[k] and j==k:
+        A=A+1
+        break
+      elif j==Ans[k]:
+        B=B+1
+        break
+
+  return A+"A"+B+"B"
+
+
+
+
+
 if __name__=="__main__":
 	app.debug=True	
 	app.run()
