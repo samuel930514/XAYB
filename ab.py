@@ -44,7 +44,7 @@ def check():
     re=0
     for l in guess:
       re=0
-      for m in (0,len(guess)):
+      for m in (0,4):
         if l==guess[m]:
           re+=1
         if re>=2:
