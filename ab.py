@@ -12,7 +12,7 @@ def Q():
 
 	Ansl = random.sample(range(0,10), 4)
 
-	for i in Ans1:
+	for i in Ansl:
 		Ans+=str(i)
 
 	Ans2={"first":Ans[0],"second":Ans[1],"third":Ans[2],"fourth":Ans[3],"Ans":Ans}
